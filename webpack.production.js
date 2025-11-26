@@ -73,8 +73,10 @@ module.exports = {
         }),
 
         new Dotenv({
-            path: path.resolve(__dirname, '.env.production')
-        })
+  path: path.resolve(__dirname, '.env.production'),
+  silent: process.env.NODE_ENV === 'production' // không báo lỗi nếu file không tồn tại
+})
+
     ],
     module: {
         rules: [
