@@ -4,7 +4,7 @@
     "description": "erp-host",
     "main": "index.js",
     "scripts": {
-        "build": "NODE_ENV=production webpack --config webpack.production.js --stats-children",
+        "build": "cross-env NODE_ENV=production webpack --config webpack.production.js --stats-children",
         "dev": "cross-env NODE_ENV=development webpack serve --config webpack.development.js",
         "staging": "NODE_ENV=staging webpack --config webpack.staging.js --stats-children",
         "serve": "serve -s dist -p 10001",
