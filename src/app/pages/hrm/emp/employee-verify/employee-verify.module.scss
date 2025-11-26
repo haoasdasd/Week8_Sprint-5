@@ -1,0 +1,40 @@
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .edit {
+        color: var(--success-color);
+        cursor: pointer;
+
+        &:hover {
+            color: RGBA(8, 143, 125) !important;
+        }
+    }
+
+    .delete {
+        color: var(--danger-color);
+        cursor: pointer;
+
+        &:hover {
+            color: RGBA(192, 81, 58) !important;
+        }
+    }
+}
+
+.columnIdDetail {
+    padding-right: 100%;
+}
+
+.imageBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .image {
+        width: 32px;
+        height: 32px;
+        border-radius: 0.25rem;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,179 @@
+@use '~/utils' as *;
+
+.sidebarNav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: left;
+
+    &.tablet {
+        text-align: center;
+    }
+
+    .sidebarNavTitle {
+        font-size: 11px;
+        line-height: 16.5px;
+        font-weight: 600;
+        letter-spacing: 0.55px;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        word-spacing: 0;
+        color: var(--sidebar-menu-item-contain-color);
+    }
+
+    .sidebarNavItem {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        position: relative;
+
+        .sidebarNavContain {
+            @include center('ver');
+            text-decoration: none;
+            font-size: 15px;
+            list-style: none;
+            color: var(--sidebar-menu-item-contain-color);
+            padding: 10px 24px;
+            gap: 5px;
+
+            &.active {
+                color: #fff !important;
+            }
+
+            &:hover {
+                color: #fff !important;
+                transition: color 0.5s ease;
+            }
+
+            .siderbarNavContainIconLeft {
+                font-size: 8px;
+                line-height: 27px;
+                margin-right: 10px;
+
+                &.tablet {
+                    margin: 0 auto;
+                }
+            }
+
+            .siderbarNavContainIconRight {
+                margin-left: auto;
+            }
+
+            .siderbarNavContainText {
+                flex-grow: 1;
+                font-family: hkgrotesk, sans-serif;
+                color: inherit;
+            }
+
+            &:hover {
+                // When hovering over the sidebarNavItem, apply styles to the nested sidebarNavMenu
+                .sidebarNavMenu {
+                    &.open {
+                        display: block; // Make the menu visible when hovered and open
+                    }
+                }
+            }
+        }
+
+        .sidebarNavMenu {
+            list-style: none;
+
+            display: none;
+            transition: all 0.3s ease-out;
+
+            &.open {
+                display: block;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+}
+
+.level0 {
+    .sidebarNavContain {
+        &.tablet {
+            .siderbarNavContainText,
+            .siderbarNavContainIconRight {
+                display: none;
+            }
+        }
+    }
+    .sidebarNavMenu {
+        &.tablet {
+            top: 0;
+            position: absolute;
+            left: 70px;
+            background-color: var(--sidebar-menu-background-color);
+            width: 250px;
+        }
+    }
+}
+
+.level1 {
+    padding-left: 10px;
+
+    &.tablet {
+        padding-left: 0;
+    }
+    .sidebarNavContain {
+        &.tablet {
+            .siderbarNavContainText,
+            .siderbarNavContainIconRight {
+                display: none;
+            }
+        }
+    }
+    .sidebarNavMenu {
+        &.tablet {
+            top: 0;
+            position: absolute;
+            left: 70px;
+            background-color: var(--sidebar-menu-background-color);
+            width: 250px;
+        }
+    }
+}
+
+.skeletonTitle {
+    height: 40.5px;
+
+    padding: 12px 20px;
+
+    .skeletonTitleItem {
+        width: 64px;
+        background: var(--skeleton-sidebar-color);
+        background-size: 200% 100%;
+    }
+}
+
+.skeletonBox {
+    display: flex;
+    flex-direction: column;
+
+    .skeletonBoxItem {
+        padding: 9px 24px;
+
+        .skeletonItem {
+            padding: 12px 0;
+            background: var(--skeleton-sidebar-color);
+            background-size: 200% 100%;
+        }
+    }
+}
+
+.floating {
+    background-color: var(--body-contain-bg-color);
+    border: 1px solid var(--tooltip-border-color);
+    padding: 10px 6px;
+    border-radius: 0.25rem;
+    color: var(--body-color);
+    font-size: 13px;
+}
+
+.separator {
+    width: 100%;
+    height: calc(1px - 0.5px);
+    background-color: var(--border-sidebar-separator);
+}

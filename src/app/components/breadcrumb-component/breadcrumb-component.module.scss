@@ -1,0 +1,44 @@
+.breadcrum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 24px;
+    background-color: var(--body-contain-bg-color);
+    margin: 0 -24px 12px;
+    transition: all 0.3s ease-out;
+    border-bottom: 1px solid var(--breadcrum-border-color);
+    // temp
+    display: none;
+
+    .breadcrumBox {
+        margin-left: auto;
+        .breadcrumBoxList {
+            display: flex;
+            margin: 0;
+            flex-wrap: wrap;
+            list-style: none;
+
+            .breadcrumBoxListItem {
+                color: var(--breadcrum-color);
+                padding-left: 8px;
+                font-size: 13px;
+                line-height: 19.5px;
+
+                a {
+                    color: var(--body-color);
+                    text-decoration: none;
+                }
+
+                &.active {
+                    &::before {
+                        content: '>';
+                        font-size: 15px;
+                        line-height: 20px;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

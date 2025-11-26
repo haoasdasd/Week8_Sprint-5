@@ -1,0 +1,69 @@
+.draggableRow {
+    &.dragging {
+        background-color: rgba(0, 123, 255, 0.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        outline: 1px dashed rgba(0, 123, 255, 0.5);
+    }
+}
+
+.cell {
+    background-color: var(--body-contain-bg-color) !important;
+    border-bottom: 1px solid var(--table-border-color) !important;
+    color: var(--body-color) !important;
+    position: relative;
+    padding: 10px !important;
+
+    &.childMenuCell {
+        background-color: var(--table-row-child-bg-color) !important;
+    }
+
+    &.compact {
+        &::before {
+            position: absolute;
+            width: 0.5px;
+            left: 30px;
+            top: 0;
+            height: 101%;
+            content: '';
+            background-color: var(--text-secondary-color);
+        }
+
+        &::after {
+            position: absolute;
+            width: 12px;
+            left: 30px;
+            top: 0;
+            transform: translate(0, 24px);
+            height: 0.5px;
+            content: '';
+            background-color: var(--text-secondary-color);
+        }
+
+        &.compactLv2 {
+            &::before {
+                position: absolute;
+                width: 0.5px;
+                left: 63px;
+                top: 0;
+                height: 105%;
+                content: '';
+                background-color: var(--text-secondary-color);
+            }
+
+            &::after {
+                position: absolute;
+                width: 12px;
+                left: 63px;
+                top: 0;
+                transform: translate(0, 24px);
+                height: 0.5px;
+                content: '';
+                background-color: var(--text-secondary-color);
+            }
+        }
+    }
+}
+
+.cellDragging {
+    opacity: 0.8;
+}

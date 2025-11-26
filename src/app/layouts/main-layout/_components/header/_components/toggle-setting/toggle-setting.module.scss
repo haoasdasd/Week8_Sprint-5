@@ -1,0 +1,222 @@
+.dropdownSetting {
+    padding: 0 !important;
+    border: 1px solid transparent !important;
+}
+
+.dropdownMenuSetting {
+    width: 300px !important;
+}
+
+.dropdownRender {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--body-color);
+    padding: 8px 14px;
+
+    .title {
+        font-weight: 500;
+    }
+
+    .subTitle {
+        font-weight: 400;
+        color: var(--text-secondary-color);
+        font-size: 12px;
+    }
+
+    .layouts {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+
+        .layoutItemVer {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
+
+            .layoutVertical {
+                display: flex;
+                height: 82px;
+                width: 100%;
+                border: 1px solid var(--table-border-color);
+                border-radius: 0.25rem;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+
+                &.active {
+                    border: 1px solid var(--primary-color);
+
+                    &::after {
+                        font-family: 'remixicon';
+                        content: '\EB7B';
+                        font-size: 8px;
+                        color: #fff;
+                        text-align: center;
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        top: 0;
+                        right: 0;
+                        transform: translate(-10px, 10px);
+                        border-radius: 0.5rem;
+                        background-color: var(--primary-color);
+                    }
+                }
+
+                .layoutVerticalSidebar {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    background-color: var(--sidebar-menu-background-color);
+                    height: 100%;
+                    width: 30%;
+                    align-items: center;
+                    padding: 4px;
+
+                    .layoutVerticalSidebarImage {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: var(--text-secondary-color);
+                    }
+
+                    .layoutVerticalSidebarMenu {
+                        width: 100%;
+                        background-color: var(--text-secondary-color);
+                        height: 4px;
+                        border-radius: 0.25rem;
+                    }
+                }
+
+                .layoutVerticalContent {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    background-color: var(--body-background-color);
+                    width: 70%;
+
+                    .layoutVerticalContentHeader {
+                        width: 100%;
+                        height: 16px;
+                        background-color: var(--header-background-color);
+                    }
+
+                    .layoutVerticalContentFooter {
+                        margin-top: auto;
+                        width: 100%;
+                        height: 8px;
+                        background-color: var(--footer-background-color);
+                    }
+                }
+            }
+
+            .layoutVerticalText {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        .layoutItemHor {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 100%;
+
+            .layoutHorizontal {
+                display: flex;
+                height: 82px;
+                width: 100%;
+                border: 1px solid var(--table-border-color);
+                border-radius: 0.25rem;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+
+                &.active {
+                    border: 1px solid var(--primary-color);
+
+                    &::after {
+                        font-family: 'remixicon';
+                        content: '\EB7B';
+                        font-size: 8px;
+                        color: #fff;
+                        text-align: center;
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        top: 0;
+                        right: 0;
+                        transform: translate(-10px, 10px);
+                        border-radius: 0.5rem;
+                        background-color: var(--primary-color);
+                    }
+                }
+
+                .layoutHorizontalSidebar {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    background-color: var(--sidebar-menu-background-color);
+                    height: 100%;
+                    width: 30%;
+                    align-items: center;
+                    padding: 4px;
+
+                    .layoutHorizontalSidebarImage {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: var(--text-secondary-color);
+                    }
+                }
+
+                .layoutHorizontalContent {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: var(--body-background-color);
+                    width: 70%;
+
+                    .layoutHorizontalContentHeader {
+                        width: 100%;
+                        height: 8px;
+                        background-color: var(--header-background-color);
+                    }
+
+                    .layoutHorizontalContentSubHeader {
+                        width: 100%;
+                        height: 8px;
+                        background-color: var(--header-background-color);
+                        display: flex;
+                        gap: 2px;
+
+                        .layoutHorizontalContentSubHeaderMenu {
+                            width: 20%;
+                            background-color: var(--text-secondary-color);
+                            height: 4px;
+                            border-radius: 2px;
+                            margin-left: 2px;
+                        }
+                    }
+
+                    .layoutHorizontalContentFooter {
+                        margin-top: auto;
+                        width: 100%;
+                        height: 8px;
+                        background-color: var(--footer-background-color);
+                    }
+                }
+            }
+
+            .layoutHorizontalText {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+}

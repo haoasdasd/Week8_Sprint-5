@@ -1,0 +1,120 @@
+$xs: 480px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1500px;
+
+
+
+$spacings: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    8: 2rem,
+    10: 2.5rem,
+    12: 3rem
+);
+
+$weights: (
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700
+);
+
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint ==xs {
+        @media (min-width: $xs) {
+            @content;
+        }
+    } @else if $breakpoint ==sm {
+        @media (min-width: $sm) {
+            @content;
+        }
+    } @else if $breakpoint ==md {
+        @media (min-width: $md) {
+            @content;
+        }
+    } @else if $breakpoint ==lg {
+        @media (min-width: $lg) {
+            @content;
+        }
+    } @else if $breakpoint ==xl {
+        @media (min-width: $xl) {
+            @content;
+        }
+    } @else if $breakpoint ==xxl {
+        @media (min-width: $xxl) {
+            @content;
+        }
+    }
+}
+
+@mixin clamp($line) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-emphasis: ellipsis;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (max-width: $sm) {
+            @content;
+        }
+    } @else if $breakpoint ==md {
+        @media (min-width: $sm) and (max-width: calc(#{$lg} - 1px)) {
+            @content;
+        }
+    } @else if $breakpoint ==lg {
+        @media (min-width: $md) and (max-width: calc(#{$xl} - 1px)) {
+            @content;
+        }
+    } @else if $breakpoint ==xl {
+        @media (min-width: $xl) {
+            @content;
+        }
+    } @else if $breakpoint ==xxl {
+        @media (min-width: $xxl) {
+            @content;
+        }
+    } @else if $breakpoint ==sm-md {
+        @media (max-width: calc(#{$lg} - 1px)) {
+            @content;
+        }
+    } @else if $breakpoint ==sm-md-lg {
+        @media (max-width: calc(#{$xl} - 1px)) {
+            @content;
+        }
+    } @else if $breakpoint ==md-lg {
+        @media (min-width: $sm) and (max-width: calc(#{$xl} - 1px)) {
+            @content;
+        }
+    } @else if $breakpoint ==lg-xl {
+        @media (min-width: $md) {
+            @content;
+        }
+    }
+}
+
+// Center
+@mixin center($direction: 'both') {
+    @if $direction == 'both' {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } @else if $direction == 'hor' {
+        display: flex;
+        justify-content: center;
+    } @else if $direction == 'ver' {
+        display: flex;
+        align-items: center;
+    }
+}

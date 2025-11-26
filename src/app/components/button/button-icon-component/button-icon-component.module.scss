@@ -1,0 +1,17 @@
+.btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #878a99;
+    transition: all 0.5s ease;
+
+    i {
+        font-size: 22px;
+    }
+
+    &:hover {
+        background-color: var(--header-item-background-color);
+    }
+}

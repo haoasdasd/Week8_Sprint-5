@@ -1,0 +1,96 @@
+.input {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #878a99;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+
+    &:disabled {
+        background-color: var(--input-disabled);
+    }
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--heading-color);
+
+    i {
+        font-size: 14px;
+    }
+
+    span {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+
+    .title {
+        color: var(--heading-color);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        i {
+            font-size: 12px;
+        }
+    }
+
+    .content {
+        color: #878a99;
+    }
+}
+
+.navTabs {
+    display: flex;
+    border-bottom: 1px solid rgba(56, 65, 74, 0.15) !important;
+
+    .navTabsItem {
+        text-decoration: none;
+        color: var(--tab-text-color);
+        font-size: 13px;
+        display: flex;
+        padding: 0 16px 8px 16px;
+        gap: 4px;
+        cursor: pointer;
+
+        position: relative;
+        overflow: hidden;
+
+        &.active {
+            color: var(--success-color);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background-color: var(--success-color);
+            transition:
+                width 0.3s ease,
+                left 0.3s ease;
+        }
+
+        &.active::before {
+            width: 100%;
+            left: 0;
+        }
+    }
+}

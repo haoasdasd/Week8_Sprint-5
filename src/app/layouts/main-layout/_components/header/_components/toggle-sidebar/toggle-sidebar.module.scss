@@ -1,0 +1,16 @@
+.toggleSidebar {
+    background-color: transparent;
+    border: none;
+    border-radius: 20%;
+    padding: 5px;
+    color: var(--header-item-color);
+
+    &:hover {
+        background-color: var(--header-item-background-color);
+    }
+    i {
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}

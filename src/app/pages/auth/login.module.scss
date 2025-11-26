@@ -1,0 +1,28 @@
+.input {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 4px;
+    &:focus {
+        border-color: #b0b0b0;
+        box-shadow: 0 0 0 0.2rem rgba(176, 176, 176, 0.25);
+    }
+}
+
+.customBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 179, 156);
+    border-color: rgb(10, 179, 156);
+    color: white;
+    padding: 10px 24px;
+    &:hover {
+        background-color: rgb(9, 161, 140);
+        border-color: rgb(9, 161, 140);
+        color: white;
+    }
+    &:active {
+        background-color: rgb(8, 145, 126) !important;
+        border-color: rgb(8, 145, 126) !important;
+        color: white !important;
+    }
+}

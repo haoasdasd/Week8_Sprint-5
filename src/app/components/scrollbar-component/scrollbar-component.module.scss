@@ -1,0 +1,23 @@
+.customScroll {
+    overflow-y: auto;
+    overflow-x: visible; /* cho phép tràn ngang */
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--scrollbar-bg-color);
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 3px;
+    }
+}

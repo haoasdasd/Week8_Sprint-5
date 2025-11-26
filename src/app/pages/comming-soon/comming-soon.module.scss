@@ -1,0 +1,15 @@
+.body {
+    background-color: var(--body-contain-bg-color);
+    border: 2px solid var(--body-border-color);
+    border-radius: 0.25rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+}

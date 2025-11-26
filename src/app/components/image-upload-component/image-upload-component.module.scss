@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .fileMain {
+        background-color: var(--body-contain-bg-color);
+        width: 100px;
+        height: 100px;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        .previewImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .subIcon {
+            text-align: center;
+            align-content: center;
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: 1px solid var(--text-secondary-color);
+            background-color: var(--body-contain-bg-color);
+            color: var(--text-secondary-color);
+            border-radius: 50%;
+        }
+    }
+}

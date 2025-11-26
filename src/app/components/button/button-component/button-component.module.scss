@@ -1,0 +1,204 @@
+.btn {
+    border: 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    min-width: 65px;
+    padding: 8px 14px;
+    &.rounded {
+        border-radius: 50rem;
+    }
+
+    @mixin softColor($type) {
+        @if ($type == 'dark') {
+            background-color: var(--btn-dark-soft-bg-color) !important;
+            color: var(--btn-dark-color) !important;
+
+            &:hover {
+                background-color: var(--btn-default-dark-color) !important;
+            }
+        } @else {
+            background-color: var(--btn-#{$type}-soft-bg-color) !important;
+            color: var(--#{$type}-color) !important;
+
+            &:hover {
+                background-color: var(--#{$type}-color) !important;
+                color: #fff !important;
+            }
+        }
+    }
+
+    @mixin outlineColor($type) {
+        @if ($type == 'dark') {
+            border: 1px solid var(--btn-default-dark-color);
+            color: var(--btn-dark-color);
+
+            &:hover {
+                background-color: var(--btn-default-dark-color);
+                color: #fff;
+            }
+        } @else if ($type == 'light') {
+            border: 1px solid var(--btn-light-border-color);
+            color: var(--btn-light-color);
+            &:hover {
+                background-color: var(--btn-default-light-color);
+                color: #000;
+            }
+        } @else {
+            border: 1px solid var(--#{$type}-color);
+            color: var(--#{$type}-color);
+            &:hover {
+                background-color: var(--#{$type}-color);
+                color: #fff;
+            }
+        }
+        background-color: transparent !important;
+    }
+
+    @mixin bgColor($type) {
+        @if ($type == 'dark') {
+            background-color: var(--btn-default-dark-color) !important;
+
+            &:hover {
+                background-color: var(--btn-hover-dark-bg-color) !important;
+                color: #fff;
+            }
+        } @else if ($type == 'light') {
+            background-color: var(--btn-default-light-color) !important;
+            color: var(--btn-light-color) !important;
+
+            &:hover {
+                background-color: var(--btn-hover-light-bg-color) !important;
+                color: #fff;
+            }
+        } @else {
+            background-color: var(--#{$type}-color) !important;
+            &:hover {
+                background-color: var(--btn-hover-#{$type}-bg-color) !important;
+                color: #fff;
+            }
+        }
+    }
+
+    &.primary {
+        @include bgColor('primary');
+    }
+
+    &.secondary {
+        @include bgColor('secondary');
+    }
+
+    &.success {
+        @include bgColor('success');
+    }
+
+    &.danger {
+        @include bgColor('danger');
+    }
+
+    &.warning {
+        @include bgColor('warning');
+    }
+
+    &.info {
+        @include bgColor('info');
+    }
+
+    &.light {
+        @include bgColor('light');
+    }
+
+    &.dark {
+        @include bgColor('dark');
+    }
+
+    &.softPrimary {
+        @include softColor('primary');
+    }
+
+    &.softSecondary {
+        @include softColor('secondary');
+    }
+
+    &.softSuccess {
+        @include softColor('success');
+    }
+
+    &.softDanger {
+        @include softColor('danger');
+    }
+
+    &.softWarning {
+        @include softColor('warning');
+    }
+
+    &.softInfo {
+        @include softColor('info');
+    }
+
+    &.softDark {
+        @include softColor('dark');
+    }
+
+    &.outlinePrimary {
+        @include outlineColor('primary');
+    }
+
+    &.outlineSecondary {
+        @include outlineColor('secondary');
+    }
+
+    &.outlineSuccess {
+        @include outlineColor('success');
+    }
+
+    &.outlineDanger {
+        @include outlineColor('danger');
+    }
+
+    &.outlineWarning {
+        @include outlineColor('warning');
+    }
+
+    &.outlineInfo {
+        @include outlineColor('info');
+    }
+
+    &.outlineLight {
+        @include outlineColor('light');
+    }
+
+    &.outlineDark {
+        @include outlineColor('dark');
+    }
+
+    .glowEffect {
+        position: absolute;
+        width: 0;
+        height: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        animation: glowEffect 0.5s ease-out;
+    }
+}
+
+@keyframes glowEffect {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    to {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+}
+
+.loading {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}

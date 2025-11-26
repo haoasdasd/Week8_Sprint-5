@@ -1,0 +1,53 @@
+@use '~/utils' as *;
+$header-height: 88px;
+$header-spacing: 12px;
+$table-header-height: 59.55px;
+
+.mainLayout {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+
+    // temp hidden
+
+    .mainLayoutContainer {
+        width: 100%;
+        max-height: 100vh;
+        background-color: var(--body-background-color);
+
+        display: flex;
+        flex-direction: column;
+
+        .mainLayoutContent {
+            color: var(--body-color);
+            transition: all 0.3s ease-out;
+            padding: 12px;
+            flex: 1;
+            font-size: 16px;
+            // min-height: calc(100vh - $header-height - ($header-spacing * 2) - $table-header-height - $footer-height);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            max-height: inherit;
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .open {
+        opacity: 1;
+        pointer-events: none;
+    }
+}

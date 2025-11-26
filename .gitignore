@@ -1,0 +1,9 @@
+dist/
+node_modules/
+.env.development
+.env.production
+.env.staging
+pnpm-lock.yaml
+footer.txt
+footer.html
+config-lang.txt

@@ -1,0 +1,22 @@
+{
+    "Please enter a valid 12-digit Vietnamese Citizen Identification Number": "Số căn cước công dân không hợp lệ",
+    "Please enter a valid Vietnam phone number": "Số điện thoại không hợp lệ",
+    "invalid email": "email không hợp lệ",
+    "required field": "không được để trống",
+    "must be a valid number": "Phải là một số hợp lệ",
+    "No whitespace allowed": "Không được có khoảng trắng",
+    "No special characters allowed": "Không được có ký tự đặc biệt",
+    "No numbers allowed": "Không được có số",
+    "must be greater than zero": "Phải lớn hơn 0",
+    "Min One character required": "Cần ít nhất 1 ký tự",
+    "Max 24 characters allowed": "Tối đa 24 ký tự",
+    "Max 32 characters allowed": "Tối đa 32 ký tự",
+    "Max 64 characters allowed": "Tối đa 64 ký tự",
+    "Max 96 characters allowed": "Tối đa 96 ký tự",
+    "Max 128 characters allowed": "Tối đa 128 ký tự",
+    "Max 256 characters allowed": "Tối đa 256 ký tự",
+    "Max 500 characters allowed": "Tối đa 500 ký tự",
+    "Max 4000 characters allowed": "Tối đa 4000 ký tự",
+
+    "More": "Xem thêm"
+}

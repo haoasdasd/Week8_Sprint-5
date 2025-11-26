@@ -1,0 +1,8 @@
+.switch {
+    cursor: pointer;
+    appearance: none;
+
+    &:checked::before {
+        content: '' !important;
+    }
+}

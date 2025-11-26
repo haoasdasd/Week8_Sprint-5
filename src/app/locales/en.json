@@ -1,0 +1,20 @@
+{
+    "Please enter a valid 12-digit Vietnamese Citizen Identification Number": "Please enter a valid 12-digit Vietnamese Citizen Identification Number",
+    "Please enter a valid Vietnam phone number": "Please enter a valid Vietnam phone number",
+    "invalid email": "invalid email",
+    "required field": "is a required field",
+    "No whitespace allowed": "No whitespace allowed",
+    "No special characters allowed": "No special characters allowed",
+    "No numbers allowed": "No numbers allowed",
+    "must be greater than zero": "must be greater than 0",
+    "Min One character required": "Min 1 character required",
+    "Max 24 characters allowed": "Max 24 characters allowed",
+    "Max 32 characters allowed": "Max 32 characters allowed",
+    "Max 64 characters allowed": "Max 64 characters allowed",
+    "Max 96 characters allowed": "Max 96 characters allowed",
+    "Max 128 characters allowed": "Max 128 characters allowed",
+    "Max 256 characters allowed": "Max 256 characters allowed",
+    "Max 500 characters allowed": "Max 500 characters allowed",
+
+    "More": "More"
+}

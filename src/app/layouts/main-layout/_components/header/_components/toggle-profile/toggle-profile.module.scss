@@ -1,0 +1,101 @@
+.dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    .profileBox {
+        display: flex;
+        align-items: center;
+
+        .profileBoxImg {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .dropdownMenu {
+        top: 46px;
+        position: absolute;
+        box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+        border-radius: 0.3rem;
+        margin: 0;
+        padding: 0;
+        background-color: var(--body-contain-bg-color);
+        list-style: none;
+        min-width: 240px;
+        right: 0;
+        opacity: 1;
+        transform: translateY(10px);
+        transition:
+            opacity 0.3s ease-out,
+            transform 0.3s ease-out;
+        visibility: hidden;
+        font-size: 13px;
+
+        .dropdownMenuInfo {
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 1px;
+
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .name {
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0 16px;
+                text-align: center;
+            }
+
+            .tax {
+                font-size: 12px;
+                font-weight: 400;
+                color: var(--text-secondary-color);
+            }
+        }
+
+        .dropdownMenuItem {
+            padding: 8px 19px;
+            color: var(--dropdown-item-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            &:hover {
+                background-color: var(--dropdown-item-hover-bg-color);
+            }
+        }
+
+        .dropdownMenuLogout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px;
+            border-top: 1px solid var(--border-separator);
+            gap: 4px;
+            color: var(--danger-color);
+
+            &:hover {
+                background-color: var(--dropdown-item-hover-bg-color);
+            }
+        }
+
+        &.isOpen {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            z-index: 999999;
+        }
+    }
+}

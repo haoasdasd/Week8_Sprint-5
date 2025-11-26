@@ -1,0 +1,50 @@
+@use '~/src/utils.scss' as *;
+
+.wrap {
+    @include center();
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--white-color);
+    padding: 0 20px;
+}
+
+.inner {
+    @include center('ver');
+
+    @include responsive(md) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.error {
+    font-size: 2rem;
+    font-weight: 400;
+    background: linear-gradient(90deg, var(--green-color-s1) 0%, var(--red-color-s1) 25%, var(--pink-color-s1) 40%);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+    font-size: 1.4rem;
+    color: #a9a9a9;
+    margin-top: 2px;
+
+    & a {
+        color: var(--green-color-s1);
+    }
+}
+
+.line {
+    height: 14px;
+    width: 1px;
+    margin: 0 10px;
+    background-color: var(--border-primary);
+
+    @include responsive(md) {
+        height: unset;
+        width: unset;
+        margin: 4px 0;
+    }
+}

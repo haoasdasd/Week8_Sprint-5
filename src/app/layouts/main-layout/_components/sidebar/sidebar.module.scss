@@ -1,0 +1,56 @@
+@use '~/utils' as *;
+
+.sidebar {
+    background-color: var(--sidebar-menu-background-color);
+    color: var(--sidebar-menu-item-color);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+
+    .siderbarHeader {
+        @include center('hor');
+        padding: 0 28px;
+        height: 55px;
+        position: sticky;
+        background-color: inherit;
+        width: inherit;
+        align-items: center;
+
+        .skeletonHeaderLogo {
+            line-height: 55px;
+            height: 32px;
+            width: 120px;
+            background: var(--skeleton-sidebar-color);
+            background-size: 200% 100%;
+        }
+
+        .siderbarHeaderLogo {
+            line-height: 55px;
+            text-decoration: none;
+            color: var(--sidebar-menu-item-color);
+        }
+    }
+    // Mobile
+    &.mobile {
+        .siderbarHeader {
+            display: none;
+        }
+        position: fixed;
+    }
+
+    .imgAvatar {
+        border-radius: 0.25rem;
+    }
+
+    .sidebarFooter {
+        color: var(--sidebar-menu-item-color);
+        padding: 16px;
+        text-align: center;
+        margin-top: auto;
+        border-top: 1px solid var(--border-sidebar-separator);
+    }
+}

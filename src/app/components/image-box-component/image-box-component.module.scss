@@ -1,0 +1,42 @@
+.containerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+    color: var(--input-color);
+    border-radius: 0.5rem;
+    padding-right: 4px;
+
+    .fileMain {
+        cursor: pointer;
+        position: relative;
+        align-self: flex-start;
+        padding: 2px 0;
+
+        .title {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .subIcon {
+            margin-left: 10px;
+            font-size: 18px;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            background-color: var(--input-disabled);
+        }
+    }
+
+    .fileView {
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+.previewImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}

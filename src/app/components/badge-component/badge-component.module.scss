@@ -1,0 +1,109 @@
+.badge {
+    padding: 10px;
+    font-size: 10px;
+    @mixin bgColor($type) {
+        background-color: var(--#{$type}-color) !important;
+
+        @if ($type == 'dark') {
+            background-color: var(--badge-default-#{$type}-color) !important;
+        }
+        @if ($type == 'light') {
+            background-color: var(--badge-default-#{$type}-color) !important;
+            color: var(--badge-#{$type}-color) !important;
+        }
+    }
+
+    @mixin bgSoftColor($type) {
+        @if ($type == 'dark') {
+            background-color: var(--badge-soft-dark-bg-color) !important;
+            color: var(--badge-soft-dark-color) !important;
+            border-color: var(--badge-soft-dark-color) !important;
+        } @else if ($type == 'light') {
+            background-color: var(--badge-soft-light-bg-color) !important;
+            color: var(--badge-soft-light-color) !important;
+            border-color: var(--badge-soft-light-border-color) !important;
+        } @else {
+            background-color: var(--badge-#{$type}-bg-color) !important;
+            color: var(--badge-#{$type}-color) !important;
+            border-color: var(--badge-#{$type}-color) !important;
+        }
+    }
+
+    &.primary {
+        @include bgColor('primary');
+    }
+
+    &.secondary {
+        @include bgColor('secondary');
+    }
+
+    &.success {
+        @include bgColor('success');
+    }
+
+    &.danger {
+        @include bgColor('danger');
+    }
+
+    &.warning {
+        @include bgColor('warning');
+    }
+
+    &.info {
+        @include bgColor('info');
+    }
+
+    &.light {
+        @include bgColor('light');
+    }
+
+    &.dark {
+        @include bgColor('dark');
+    }
+
+    // Soft
+    &.softPrimary {
+        @include bgSoftColor('primary');
+    }
+
+    &.softSecondary {
+        @include bgSoftColor('secondary');
+    }
+
+    &.softSuccess {
+        @include bgSoftColor('success');
+    }
+
+    &.softDanger {
+        @include bgSoftColor('danger');
+    }
+
+    &.softWarning {
+        @include bgSoftColor('warning');
+    }
+
+    &.softInfo {
+        @include bgSoftColor('info');
+    }
+
+    &.softLight {
+        @include bgSoftColor('light');
+    }
+
+    &.softDark {
+        @include bgSoftColor('dark');
+    }
+
+    &.outline {
+        border: 1px solid !important;
+        background-color: transparent !important;
+    }
+
+    &.rounded {
+        border-radius: 50rem;
+    }
+
+    &.leftBorder {
+        border-left: 3px solid !important;
+    }
+}

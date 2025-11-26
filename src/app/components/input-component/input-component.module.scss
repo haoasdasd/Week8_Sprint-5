@@ -1,0 +1,182 @@
+@use '~/utils' as *;
+
+$padding-left: 0.6rem;
+
+.floating {
+    position: relative;
+    padding: 10px;
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 0.5rem;
+
+    .formControl {
+        border: 0 solid transparent !important;
+        &:focus {
+            border: 0 solid transparent !important;
+            box-shadow: none !important;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.active label,
+    input:focus + label {
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+    }
+}
+
+.formDropdown {
+    position: relative;
+    .formControl {
+        padding-left: 6px;
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+        border-radius: 0.3rem;
+        margin: 0;
+        padding: 0;
+        background-color: var(--body-contain-bg-color);
+        list-style: none;
+        right: 0;
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+            opacity 0.3s ease-out,
+            transform 0.3s ease-out;
+        visibility: hidden;
+        z-index: 9999;
+        font-size: 12px;
+        width: 100%;
+
+        .dropdownMenuBoxSearch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 12px;
+        }
+
+        .dropdownMenuItem {
+            padding: 8px 14px;
+            color: var(--dropdown-item-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--dropdown-item-hover-bg-color);
+            }
+
+            &.active {
+                background-color: var(--dropdown-item-hover-bg-color);
+            }
+        }
+
+        &.isOpen {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+}
+
+.formIcon {
+    position: relative;
+    width: 100%;
+    i {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 6px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .formControl {
+        padding: 6px 8px 6px 30px;
+
+        &.rightIcon {
+            padding: 6px 8px;
+        }
+    }
+
+    &.rightIcon {
+        i {
+            left: auto;
+            right: 6px;
+        }
+    }
+}
+
+.formControl {
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+    color: var(--input-color);
+    padding: 6px 8px;
+    width: 100%;
+    font-size: 12px !important;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    outline: none;
+    position: relative;
+    color-scheme: var(--input-type-date-color);
+
+    &.borderStyle {
+        border-style: dashed;
+    }
+
+    &.customDate {
+        &::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            display: block;
+            position: absolute;
+            right: 10px;
+            width: 20px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        &::before {
+            font-family: 'remixicon';
+            content: '\EB27';
+            position: absolute;
+            right: 10px;
+            top: 25%;
+            pointer-events: none;
+        }
+    }
+
+    &::placeholder {
+        color: var(--text-secondary-color);
+    }
+
+    &:disabled {
+        background-color: var(--input-disabled);
+    }
+
+    &:focus {
+        background-color: var(--body-contain-bg-color);
+        color: var(--body-color);
+        box-shadow: none;
+        border-color: #89949e;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.noMarginBottom {
+    margin-bottom: 0 !important;
+}
