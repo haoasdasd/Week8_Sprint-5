@@ -14,8 +14,7 @@ module.exports = {
         filename: '[name].[contenthash].bundle.js',
         chunkFilename: '[name].[contenthash].chunk.js',
         clean: true,
-        publicPath: './' ,
-        publicPath: config.publicPath
+        publicPath: './' 
     },
     devServer: {
         static: {
