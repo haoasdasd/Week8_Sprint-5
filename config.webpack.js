@@ -1,16 +1,14 @@
-const path = require('path')
-const dotenv = require('dotenv')
+const path = require('path');
+const dotenv = require('dotenv');
 
-const desp = require('./package.json').dependencies
-//const modeEnv = process.env.NODE_ENV
-//dotenv.config({ path: path.resolve(__dirname, `.env.${modeEnv}`) })
-const envPath = path.resolve(__dirname, `.env.${process.env.NODE_ENV}`);
-try {
+if (process.env.NODE_ENV === 'development') {
+  const envPath = path.resolve(__dirname, `.env.${process.env.NODE_ENV}`);
   dotenv.config({ path: envPath });
   console.log(`Loaded env file: ${envPath}`);
-} catch (err) {
-  console.warn(`No env file found for ${process.env.NODE_ENV}, skipping...`);
+} else {
+  console.log(`Skipping dotenv load on ${process.env.NODE_ENV}`);
 }
+
 module.exports = {
   publicPath: '/',
   moduleExposes: {},
@@ -27,4 +25,4 @@ module.exports = {
     },
     extensions: ['.js', '.ts', '.tsx', '.json']
   }
-}
+};
